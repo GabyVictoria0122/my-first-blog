@@ -4,5 +4,7 @@ from . import views
 
 urlpatterns = [
     # (URL raiz)/ view dessa URL/ nome, pois se mudar a url raiz o nome vai continuar o mesmo e n vai dar conflito
-    path('', views.post_list, name='post_list')
+    path('', views.post_list, name='post_list'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+
 ]
